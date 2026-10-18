@@ -37,3 +37,23 @@ footer { border-top: 1px solid #dce6e0; padding: 28px; text-align: center; color
   .actions { align-items: stretch; flex-direction: column; gap: 4px; }
   .actions .text-link { justify-content: center; }
 }
+
+.slide-progress { margin: 22px 0; }
+.slide-progress label { display: block; font-weight: 700; margin-bottom: 8px; }
+.slide-progress progress { display: block; width: 100%; height: 12px; accent-color: #1c6855; }
+.slide-content { overflow-wrap: anywhere; }
+.slide-content h2 { margin-top: 0; }
+.slide-content p { margin: 18px 0; white-space: pre-line; }
+.slide-content ul { padding-left: 1.5em; }
+.slide-content li + li { margin-top: 8px; }
+.slide-figure { margin: 24px 0 0; }
+.slide-figure img { display: block; max-width: 100%; height: auto; margin: auto; }
+.diagram-placeholder { border: 1px dashed #7a9b89; border-radius: 8px; padding: 24px 16px; text-align: center; background: #f6f8f7; }
+.diagram-placeholder span { font-size: .85rem; color: #526860; }
+.slide-navigation { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+.slide-navigation .button { margin: 0; font: inherit; font-weight: 700; border: 1px solid #1c6855; }
+.slide-navigation .secondary { background: white; color: #1c6855; }
+.slide-navigation button:disabled { border-color: #c8d3cd; color: #75817b; background: #edf1ee; cursor: not-allowed; }
+@media (max-width: 600px) {
+  .slide-navigation .button { flex: 1; padding: 10px 12px; }
+}
