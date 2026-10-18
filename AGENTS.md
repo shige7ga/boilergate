@@ -60,3 +60,17 @@ sudo chown -R $USER:$USER ./
 * デフォルトテンプレートを用意する。
 * 独自テンプレートはLocalStorageに保存する。
 * プロンプトを簡単に作成・コピー・再利用できるようにする。
+
+## プロジェクト仕様
+
+* 機能仕様は `docs/SPEC.md` を参照し、判断に迷った場合は同仕様書を優先する。
+* 仕様と矛盾する点や不明点がある場合は、実装前に指摘して確認する。
+* React / TypeScript / Vite のSPAとして実装する。保存はLocalStorageのみとし、バックエンド・DB・AI APIは使用しない。
+* 新規ライブラリは必要な場合のみ追加し、追加する理由を説明する。
+* 過度な抽象化を避け、小さく読みやすい構成にする。
+* 作業後は、README.mdの「開発用コマンド」に従い、以下のlintとbuildが通ることを確認する。
+
+```bash
+docker compose exec app npm run lint
+docker compose exec app npm run build
+```
