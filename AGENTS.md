@@ -44,6 +44,8 @@ sudo chown -R $USER:$USER ./
 
 ## 変更点
 
+## 目的
+
 ## 補足
 ```
 
