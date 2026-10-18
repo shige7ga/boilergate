@@ -2,7 +2,12 @@
 export interface Slide {
   id: string
   title: string
-  body: string
+  body: (
+    | { type: 'paragraph'; text: string }
+    | { type: 'list'; items: string[] }
+  )[]
+  image?: { src: string; alt: string }
+  diagramPlaceholder?: string
 }
 
 export interface Question {

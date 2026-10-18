@@ -1,6 +1,7 @@
 import { useEffect, useRef, useSyncExternalStore } from 'react'
 import type { ReactNode } from 'react'
 import { subjects } from './data/content'
+import { SlideLearning } from './components/SlideLearning'
 import './App.css'
 
 function subscribe(onChange: () => void) {
@@ -23,7 +24,7 @@ function Content({ path }: { path: string }) {
         <span className="eyebrow">はじめての方におすすめ</span>
         <h2>{firstLesson.title}</h2>
         <p>{firstLesson.description}</p>
-        <a className="button" href={`#/lessons/${firstLesson.id}/slides`}>最初のレッスンへ →</a>
+        <a className="button" href={`#/lessons/${firstLesson.id}/slides/1`}>最初のレッスンへ →</a>
       </aside>}
       <h2>科目から探す</h2>
       <ul className="cards">{subjects.map(subject => <li className="card" key={subject.id}>
@@ -64,7 +65,7 @@ function Content({ path }: { path: string }) {
         <div><h3>{lesson.title}</h3><p>{lesson.description}</p>
           <p className="meta">約{lesson.estimatedMinutes}分 ・ スライド{lesson.slides.length}枚 ・ 練習{lesson.practiceQuestions.length}問</p>
           <div className="actions">
-            <a className="button" href={`#/lessons/${lesson.id}/slides`}>スライドで学ぶ →</a>
+            <a className="button" href={`#/lessons/${lesson.id}/slides/1`}>スライドで学ぶ →</a>
             <a className="text-link" href={`#/lessons/${lesson.id}/practice`}>練習問題へ</a>
           </div>
         </div>
@@ -77,10 +78,13 @@ function Content({ path }: { path: string }) {
     </Page>
   }
   const lesson = section?.lessons.find(item => item.id === id)
-  const lessonPlaceholder = resource === 'lessons' && lesson && (action === 'slides' || action === 'practice')
+  if (resource === 'lessons' && lesson && section && action === 'slides' && (parts.length === 3 || parts.length === 4)) {
+    return <SlideLearning lesson={lesson} sectionId={section.id} position={parts[3] ?? '1'} />
+  }
+  const lessonPlaceholder = resource === 'lessons' && lesson && action === 'practice'
   const testPlaceholder = resource === 'sections' && section && action === 'test'
   if (section && parts.length === 3 && (lessonPlaceholder || testPlaceholder)) {
-    const title = testPlaceholder ? 'セクション確認テスト' : action === 'slides' ? 'スライド学習' : '練習問題'
+    const title = testPlaceholder ? 'セクション確認テスト' : '練習問題'
     return <Page title={title}>
       <p className="eyebrow">{lessonPlaceholder ? lesson.title : section.title}</p>
       <div className="card placeholder"><h2>この学習画面は準備中です</h2>

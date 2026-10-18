@@ -21,22 +21,55 @@ export const subjects: Subject[] = [
               {
                 "id": "boiler-role-purpose",
                 "title": "ボイラーとは",
-                "body": "ボイラーは燃料などの熱を使って水を温め、蒸気や温水をつくる装置です。"
+                "body": [
+                  {
+                    "type": "paragraph",
+                    "text": "ボイラーは燃料などの熱を使って水を温め、蒸気や温水をつくる装置です。"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "まずは「熱をつくる」「水へ伝える」「利用先へ届ける」という流れに注目しましょう。細かな部品名を覚える前に、装置全体で何をしているかをつかむことが、このレッスンの目標です。"
+                  }
+                ]
               },
               {
                 "id": "boiler-role-steam",
                 "title": "蒸気とは",
-                "body": "水が熱を受けて気体になったものを蒸気と呼びます。"
+                "body": [
+                  {
+                    "type": "paragraph",
+                    "text": "水が熱を受けて気体になったものを蒸気と呼びます。"
+                  }
+                ]
               },
               {
                 "id": "boiler-role-use",
                 "title": "熱の使い道",
-                "body": "つくった蒸気や温水は、工場の加熱や建物の暖房などに利用されます。"
+                "body": [
+                  {
+                    "type": "paragraph",
+                    "text": "つくった蒸気や温水は、工場の加熱や建物の暖房などに利用されます。"
+                  },
+                  {
+                    "type": "list",
+                    "items": [
+                      "工場で材料を温める",
+                      "建物の暖房に使う",
+                      "温水として熱を届ける"
+                    ]
+                  }
+                ]
               },
               {
                 "id": "boiler-role-flow",
                 "title": "熱を届ける流れ",
-                "body": "熱源から水へ熱を伝え、蒸気や温水として利用先へ届けます。"
+                "body": [
+                  {
+                    "type": "paragraph",
+                    "text": "熱源から水へ熱を伝え、蒸気や温水として利用先へ届けます。"
+                  }
+                ],
+                "diagramPlaceholder": "熱源 → 水を温める → 蒸気・温水 → 利用先"
               }
             ],
             "practiceQuestions": [
@@ -105,22 +138,42 @@ export const subjects: Subject[] = [
               {
                 "id": "heat-transfer-overview",
                 "title": "熱の伝わり方は3つ",
-                "body": "熱の伝わり方には、伝導・対流・放射があります。"
+                "body": [
+                  {
+                    "type": "paragraph",
+                    "text": "熱の伝わり方には、伝導・対流・放射があります。"
+                  }
+                ]
               },
               {
                 "id": "heat-transfer-conduction",
                 "title": "伝導",
-                "body": "伝導は、物体の内部などで熱が高温側から低温側へ伝わる現象です。金属の棒の端を温める例で考えられます。"
+                "body": [
+                  {
+                    "type": "paragraph",
+                    "text": "伝導は、物体の内部などで熱が高温側から低温側へ伝わる現象です。金属の棒の端を温める例で考えられます。"
+                  }
+                ]
               },
               {
                 "id": "heat-transfer-convection",
                 "title": "対流",
-                "body": "対流は、水や空気などの流れによって熱が運ばれる現象です。鍋の水が温まるときにも起こります。"
+                "body": [
+                  {
+                    "type": "paragraph",
+                    "text": "対流は、水や空気などの流れによって熱が運ばれる現象です。鍋の水が温まるときにも起こります。"
+                  }
+                ]
               },
               {
                 "id": "heat-transfer-radiation",
                 "title": "放射",
-                "body": "放射は、電磁波によって熱が伝わる現象です。離れた火から暖かさを感じる例で考えられます。"
+                "body": [
+                  {
+                    "type": "paragraph",
+                    "text": "放射は、電磁波によって熱が伝わる現象です。離れた火から暖かさを感じる例で考えられます。"
+                  }
+                ]
               }
             ],
             "practiceQuestions": [
@@ -189,22 +242,42 @@ export const subjects: Subject[] = [
               {
                 "id": "boiler-parts-overview",
                 "title": "構成部分のつながり",
-                "body": "ボイラーでは、燃焼で生じた熱を伝熱面を通して水に伝えます。"
+                "body": [
+                  {
+                    "type": "paragraph",
+                    "text": "ボイラーでは、燃焼で生じた熱を伝熱面を通して水に伝えます。"
+                  }
+                ]
               },
               {
                 "id": "boiler-parts-furnace",
                 "title": "燃焼室",
-                "body": "燃焼室は、燃料を燃やして熱を発生させる空間です。"
+                "body": [
+                  {
+                    "type": "paragraph",
+                    "text": "燃焼室は、燃料を燃やして熱を発生させる空間です。"
+                  }
+                ]
               },
               {
                 "id": "boiler-parts-surface",
                 "title": "伝熱面",
-                "body": "伝熱面は、高温の燃焼ガスなどから水へ熱を伝える面です。"
+                "body": [
+                  {
+                    "type": "paragraph",
+                    "text": "伝熱面は、高温の燃焼ガスなどから水へ熱を伝える面です。"
+                  }
+                ]
               },
               {
                 "id": "boiler-parts-path",
                 "title": "燃焼ガスの通り道",
-                "body": "燃焼ガスは伝熱面に熱を伝えながら通り道を進み、排出されます。"
+                "body": [
+                  {
+                    "type": "paragraph",
+                    "text": "燃焼ガスは伝熱面に熱を伝えながら通り道を進み、排出されます。"
+                  }
+                ]
               }
             ],
             "practiceQuestions": [
